@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+body {
+  margin: 0;
+  background-color:rgb(250, 245, 245);
+}
+
+#map {
+  height: 75vh;
+  width: 100vw;
+  border-bottom:outset ;
+}
+
+/* ============Driving at night styling================ */
+.hero
+{
+	height: 100vh;
+	width: 100%;
+	background-image: url(/resources/images/night.png);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.highway
+{
+	height: 60px;
+	width: 500%;
+	display: block;
+	background-image: url(/resources/images/road2.png);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: highway 5s linear infinite;
+}
+@keyframes highway
+{
+	100%{
+		transform: translate(-3400px);
+	}
+}
+.city
+{
+	height: 80px;
+	width: 500%;
+	background-image: url(/resources/images/road.png);
+	position: absolute;
+	bottom: 60px;
+	left: 0;
+	right: 0;
+	display: block;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: city 50s linear infinite;
+}
+@keyframes city
+{
+	100%{
+		transform: translateX(-3500px);
+	}
+}
+.car
+{
+	width: 400px;
+	left: 50%;
+	bottom: 25px;
+	transform: translate(-50%);
+	position: absolute;
+	z-index: 1;
+}
+.car img
+{
+	width: 100%;
+	animation: car 2s linear infinite;
+
+}
+@keyframes car
+{
+	100% {
+		transform: translateY(-1.5px);
+	}
+	50% {
+		transform: translateY(1.5px);
+	}
+	0% {
+		transform: translateY(-1.5px);
+	}
+}
+.wheel
+{
+	left: 50%;
+	bottom: 55px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 10;
+}
+.wheel img
+{
+	width: 35px;
+	height: 35px;
+	animation: wheel 1s linear infinite;
+}
+.back-wheel
+{
+	left: -170px;
+	position: absolute;
+}
+.front-wheel
+{
+	left: -65px;
+	position: absolute;
+}
+@keyframes wheel
+{
+	100%{
+		transform: rotate(360deg);
+	}
+}
