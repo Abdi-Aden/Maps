@@ -1,10 +1,12 @@
 body {
   margin: 0;
   background-color:rgb(250, 245, 245);
+  display: grid;
+  grid-template-rows: 75% 25%;
 }
 
 #map {
-  height: 75vh;
+	height: 75vh;
   width: 100vw;
   border-bottom:outset ;
 }
@@ -12,7 +14,7 @@ body {
 /* ============Driving at night styling================ */
 .hero
 {
-	height: 100vh;
+	height: 25vh;
 	width: 100%;
 	background-image: url(/resources/images/night.png);
 	background-size: cover;
@@ -24,7 +26,7 @@ body {
 .highway
 {
 	height: 60px;
-	width: 500%;
+	width: 5000%;
 	display: block;
 	background-image: url(/resources/images/road2.png);
 	position: absolute;
@@ -38,7 +40,7 @@ body {
 @keyframes highway
 {
 	100%{
-		transform: translate(-3400px);
+		transform: translate(-2400px);
 	}
 }
 .city
